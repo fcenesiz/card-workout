@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kuf-iD-elP">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Colors-->
+        <scene sceneID="8gH-Tm-Hh6">
+            <objects>
+                <viewController id="stw-cK-YtG" customClass="ColorsTableVC" customModule="RandomColors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gna-mi-e3W">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cct-Ck-8ly">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="color_cell" id="QO6-6C-sIt">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QO6-6C-sIt" id="rUK-kB-1F7">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="stw-cK-YtG" id="H4s-Xl-vkh"/>
+                                    <outlet property="delegate" destination="stw-cK-YtG" id="ubB-TH-XX7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NSL-Fi-kip"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cct-Ck-8ly" firstAttribute="leading" secondItem="gna-mi-e3W" secondAttribute="leading" constant="16" id="7vx-XA-ENh"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="cct-Ck-8ly" secondAttribute="bottom" constant="328" id="JmQ-CY-JgU"/>
+                            <constraint firstItem="NSL-Fi-kip" firstAttribute="trailing" secondItem="cct-Ck-8ly" secondAttribute="trailing" id="MOT-hM-BIh"/>
+                            <constraint firstAttribute="bottom" secondItem="cct-Ck-8ly" secondAttribute="bottom" id="aqn-Yn-UgA"/>
+                            <constraint firstItem="cct-Ck-8ly" firstAttribute="leading" secondItem="gna-mi-e3W" secondAttribute="leading" id="cYf-xg-UxA"/>
+                            <constraint firstItem="cct-Ck-8ly" firstAttribute="top" secondItem="gna-mi-e3W" secondAttribute="topMargin" id="f1Y-ru-u83"/>
+                            <constraint firstItem="cct-Ck-8ly" firstAttribute="leading" secondItem="gna-mi-e3W" secondAttribute="leadingMargin" id="jRu-S7-G2u"/>
+                            <constraint firstItem="cct-Ck-8ly" firstAttribute="leading" secondItem="gna-mi-e3W" secondAttribute="leading" id="niQ-tS-Mrj"/>
+                            <constraint firstItem="cct-Ck-8ly" firstAttribute="leading" secondItem="gna-mi-e3W" secondAttribute="leading" constant="16" id="qj6-9o-kEX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Colors" id="o22-5M-XFR"/>
+                    <connections>
+                        <segue destination="4OX-55-0CI" kind="show" identifier="ToColorDetailVC" id="iAe-Gt-XZQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EBW-Ns-z6A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="434.35114503816794" y="-229.57746478873241"/>
+        </scene>
+        <!--Colors DetailVC-->
+        <scene sceneID="eMO-v8-blW">
+            <objects>
+                <viewController id="4OX-55-0CI" customClass="ColorsDetailVC" customModule="RandomColors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lot-9w-MRO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="NUF-ES-Xfq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bym-MP-flD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2JC-N9-vmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1404" y="-230"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Q8N-q9-90Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kuf-iD-elP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="atX-RM-IuJ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="stw-cK-YtG" kind="relationship" relationship="rootViewController" id="E2g-4z-yWk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yvm-aP-B1G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-492.36641221374043" y="-229.57746478873241"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
